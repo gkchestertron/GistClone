@@ -12,6 +12,11 @@ class User < ActiveRecord::Base
   has_many :gists,
   :foreign_key => :owner_id
 
+  has_many :favorites
+  has_many :favorite_gists,
+  :through => :favorites,
+  :source => :gist
+
   def self.find_by_credentials(username, password)
     user = User.find_by_username(username)
 

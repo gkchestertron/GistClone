@@ -1,8 +1,13 @@
 Gist.Views.Gists = Backbone.View.extend({
 	render: function () {
-		var content = this.template({gists: this.collection});
+		var that = this;
+		var content = this.template();
 		this.$el.html(content);
-		return this;
+		this.collection.each(function (model) {
+			var subview = new Gist.Views.GistDetail({model: model});
+			that.$el.find('ul').append(subview.render());
+		});
+		return this.$el;
 	},
 	template: JST['gists/gists']
 });

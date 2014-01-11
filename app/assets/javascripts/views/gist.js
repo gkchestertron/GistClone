@@ -4,7 +4,7 @@ Gist.Views.Gist = Backbone.View.extend({
 			gist: this.model
 		})
 		this.$el.html(content);
-		return this
+		return this.$el;
 	},
 	template: JST['gists/gist']
 

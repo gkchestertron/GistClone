@@ -6,13 +6,13 @@ class GistsController < ApplicationController
   end
 
   def index
-    @gists = current_user.gists
-    render :index
+    @gists = Gist.all
   end
 
   def update
   end
 
   def show
+    @gist = Gist.find(params[:id])
   end
 end

@@ -4,8 +4,13 @@ window.Gist = {
   Views: {},
   Routers: {},
   initialize: function() {
-		new Gist.Router.Router();
-		Backbone.history.start();
+		Gist.Collections.gists = new Gist.Collections.Gists();
+		Gist.Collections.gists.fetch({
+			success: function () {
+				new Gist.Routers.Router({$el: $("#content")});
+				Backbone.history.start();
+			}
+		});
   }
 };
 

@@ -1,0 +1,6 @@
+<%= gist.get("title") %>
+<% if (gist.get("favorited")) { %>
+	<button class="unfavorite">Unfavorite</button>
+<% } else { %>
+	<button class="favorite">Favorite</button>
+<% } %>
