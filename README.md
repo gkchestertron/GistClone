@@ -1,9 +1,2 @@
-# NewAuthDemo
 #Gist Clone
-
-* [app/models/user.rb](./app/models/user.rb)
-* [app/controllers/sessions_controller.rb](./app/controllers/sessions_controller.rb)
-* [app/controllers/users_controller.rb](./app/controllers/users_controller.rb)
-* [app/helpers/sessions_helper.rb](./app/helpers/sessions_helper.rb)
-* [app/views/sessions/new.html.erb](./app/views/sessions/new.html.erb)
-* [app/views/users/_form.html.erb](./app/views/users/_form.html.erb)
+This is a very incomplete gist clone. I was practicing the backbone framework with my friend, Emily. Check out her github (I forked this from one of her repos).
